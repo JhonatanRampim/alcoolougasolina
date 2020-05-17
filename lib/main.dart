@@ -1,11 +1,6 @@
-import 'package:alcool_gasolina/widgets/loading.button.widget.dart';
-import 'package:alcool_gasolina/widgets/submit-form.dart';
-import 'package:alcool_gasolina/widgets/success.widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_masked_text/flutter_masked_text.dart';
 
-import 'widgets/input.widget.dart';
-import 'widgets/logo.widget.dart';
+import 'pages/home.page.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,28 +17,6 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  var _gasCtrl = new MoneyMaskedTextController();
-  var _alcCtrl = new MoneyMaskedTextController();
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
-      body: ListView(
-        children: <Widget>[
-          Logo(),
-          SubmitForm(
-            busy: false,
-            alcCtrl: _alcCtrl,
-            gasCtrl: _gasCtrl,
-            submitFunc: () {},
-          )
-        ],
-      ),
     );
   }
 }
