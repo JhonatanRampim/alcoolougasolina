@@ -1,4 +1,4 @@
-# alcool_gasolina
+# Álcool ou Gasolina
 
 Projeto com base nas aulas Curso Flutter: Álcool ou Gasolina do balta.io 
 - [Link](https://balta.io/cursos/7192)
