@@ -1,3 +1,6 @@
+import 'package:alcool_gasolina/widgets/loading.button.widget.dart';
+import 'package:alcool_gasolina/widgets/submit-form.dart';
+import 'package:alcool_gasolina/widgets/success.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
 
@@ -33,31 +36,11 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           Logo(),
-          Input(
-            ctrl: _gasCtrl,
-            label: 'Gasolina',
-          ),
-          Input(
-            ctrl: _alcCtrl,
-            label: 'Álcool',
-          ),
-          Container(
-            margin: EdgeInsets.all(30),
-            height: 60,
-            decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.8),
-              borderRadius: BorderRadius.circular(60),
-            ),
-            child: FlatButton(
-              child: Text(
-                "CALCULAR",
-                style: TextStyle(
-                  color: Theme.of(context).primaryColor,
-                  fontSize: 25,
-                ),
-              ),
-              onPressed: () {},
-            ),
+          SubmitForm(
+            busy: false,
+            alcCtrl: _alcCtrl,
+            gasCtrl: _gasCtrl,
+            submitFunc: () {},
           )
         ],
       ),
